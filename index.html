@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Studio — Design. Build. Launch.</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Design Studio<span class="logo-dot"></span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services-strip">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#cta" class="nav-cta">Start a project</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" style="padding:0">
+  <div class="hero-center">
+    <div class="hero-eyebrow fu">
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Creative Design Studio</div>
+    </div>
+    <h1 class="hero-headline fu d2">
+      Start your project<br>with <span class="accent">Studio</span><sup style="font-size:.38em;vertical-align:super;color:var(--accent)">®</sup>
+    </h1>
+    <!-- tag pills inline after headline -->
+    <div class="fu d3" style="display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem">
+      <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.82);border:1px solid var(--bd);border-radius:2rem;padding:.38rem .9rem;font-size:.72rem;font-weight:500;color:var(--g5);backdrop-filter:blur(6px)"><i data-lucide="figma" style="width:12px;height:12px;color:var(--accent)"></i>Figma Design</span>
+      <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.82);border:1px solid var(--bd);border-radius:2rem;padding:.38rem .9rem;font-size:.72rem;font-weight:500;color:var(--g5);backdrop-filter:blur(6px)"><i data-lucide="code-2" style="width:12px;height:12px;color:var(--accent)"></i>Development</span>
+      <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.82);border:1px solid var(--bd);border-radius:2rem;padding:.38rem .9rem;font-size:.72rem;font-weight:500;color:var(--g5);backdrop-filter:blur(6px)"><i data-lucide="rocket" style="width:12px;height:12px;color:var(--accent)"></i>Deployment</span>
+      <span style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.82);border:1px solid var(--bd);border-radius:2rem;padding:.38rem .9rem;font-size:.72rem;font-weight:500;color:var(--g5);backdrop-filter:blur(6px)"><i data-lucide="zap" style="width:12px;height:12px;color:var(--accent)"></i>Fast Delivery</span>
+    </div>
+    <div class="hero-actions fu d4">
+      <a href="#cta" class="btn btn-dark">
+        Get in touch
+        <span class="pulse-dot"></span>
+      </a>
+      <a href="#work" class="btn btn-ghost">See our work</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div id="marquee">
+  <div class="mq-track" style="animation:mq 24s linear infinite;display:flex;gap:3rem;width:max-content;white-space:nowrap;padding:1.1rem 0">
+    <span class="mq-item-sm"><span class="mq-dot"></span>UI/UX Design</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Figma to Code</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Web Development</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Fast Delivery</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Deployment Ready</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Premium Design</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Conversion Focused</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Design Systems</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>UI/UX Design</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Figma to Code</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Web Development</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Fast Delivery</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Deployment Ready</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Premium Design</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Conversion Focused</span>
+    <span class="mq-item-sm"><span class="mq-dot"></span>Design Systems</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+  PASTE <style> INTO style.css
+  PASTE SECTIONS INTO index.html
+═══════════════════════════════════════ -->
+
+<style>
+
+/* ── ABOUT ── */
+.about-bento {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+.ab {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+/* Left — dark philosophy cell */
+.ab-statement {
+  background: var(--black);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.ab-statement::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+.ab-statement-top { position: relative; z-index: 1; }
+.ab-statement-label {
+  font-size: .65rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1.5rem;
+}
+.ab-statement-text {
+  font-family: var(--fh);
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  font-weight: 800; letter-spacing: -.03em;
+  line-height: 1.3; color: #fff;
+}
+.ab-statement-bottom {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.ab-statement-founder { display: flex; align-items: center; gap: .75rem; }
+.ab-founder-av {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--fh); font-size: .62rem; font-weight: 800; color: #fff; flex-shrink: 0;
+}
+.ab-founder-name { font-family: var(--fh); font-size: .82rem; font-weight: 700; color: #fff; }
+.ab-founder-role { font-size: .7rem; color: rgba(255,255,255,.38); }
+.ab-statement-since {
+  font-family: var(--fh); font-size: .7rem; font-weight: 600;
+  color: rgba(255,255,255,.22); letter-spacing: .06em;
+}
+
+/* Right — dot-grid text cell */
+.ab-text {
+  background: var(--white);
+  border: 1px solid var(--bd);
+  padding: 2.5rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative; overflow: hidden;
+}
+.ab-text::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(14,14,14,.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none; z-index: 0;
+}
+.ab-text > * { position: relative; z-index: 1; }
+.ab-text p {
+  font-size: .95rem; color: var(--g5);
+  line-height: 1.85; margin-bottom: 2rem;
+}
+
+/* Stats — editorial divider row */
+.ab-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1.25rem;
+  border: 1px solid var(--bd);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.ab-stat {
+  padding: 2rem 2rem 1.75rem;
+  border-right: 1px solid var(--bd);
+  background: var(--white);
+  position: relative;
+  transition: background .2s;
+}
+.ab-stat:last-child { border-right: none; }
+.ab-stat:hover { background: var(--bg2); }
+.ab-stat-bar {
+  width: 28px; height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+.ab-stat-n {
+  font-family: var(--fh); font-size: 3rem;
+  font-weight: 800; letter-spacing: -.06em;
+  line-height: 1; color: var(--black);
+  margin-bottom: .4rem;
+}
+.ab-stat-n sup {
+  font-size: .38em; vertical-align: super;
+  color: var(--accent); font-weight: 800;
+}
+.ab-stat-l {
+  font-size: .75rem; color: var(--g4);
+  font-weight: 500; line-height: 1.4;
+}
+
+/* ── TEAM ── */
+.team-list { display: flex; flex-direction: column; }
+.tm-head {
+  display: grid;
+  grid-template-columns: 52px 56px 1fr 160px 1fr 80px;
+  gap: 1.5rem;
+  align-items: center;
+  padding: .5rem 1rem 1rem;
+}
+.tm-th {
+  font-size: .62rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--g4);
+}
+.tm-row {
+  display: grid;
+  grid-template-columns: 52px 56px 1fr 160px 1fr 80px;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--bd);
+  border-radius: .5rem;
+  transition: background .2s;
+}
+.tm-row:first-child { border-top: 1px solid var(--bd); }
+.tm-row:hover { background: rgba(255,255,255,.6); }
+.tm-row-num {
+  font-family: var(--fh); font-size: .8rem;
+  font-weight: 700; color: var(--g3); letter-spacing: .1em;
+}
+.tm-row-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  overflow: hidden; background: var(--bg2);
+  border: 2px solid var(--bd); flex-shrink: 0;
+}
+.tm-row-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
+.tm-row-name {
+  font-family: var(--fh); font-size: 1rem;
+  font-weight: 800; letter-spacing: -.02em; color: var(--black);
+  transition: color .2s;
+}
+.tm-row:hover .tm-row-name { color: var(--accent); }
+.tm-row-role {
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--accent);
+}
+.tm-row-bio { font-size: .8rem; color: var(--g5); line-height: 1.5; }
+.tm-row-socials { display: flex; gap: .4rem; justify-content: flex-end; }
+.tm-soc {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 1.5px solid var(--bdd);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .62rem; font-weight: 700;
+  color: var(--g5); text-decoration: none; transition: all .2s;
+}
+.tm-soc:hover { background: var(--black); color: #fff; border-color: var(--black); }
+
+@media (max-width: 960px) {
+  .about-bento { grid-template-columns: 1fr; }
+  .ab-stats { grid-template-columns: repeat(2, 1fr); }
+  .ab-stat { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .tm-head, .tm-row { grid-template-columns: 44px 44px 1fr 80px; gap: 1rem; }
+  .tm-row-bio, .tm-row-role { display: none; }
+  .tm-th:nth-child(4), .tm-th:nth-child(5) { display: none; }
+}
+@media (max-width: 520px) {
+  .ab-stats { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+
+<!-- ═══════════════════
+  ABOUT
+═══════════════════ -->
+<section id="about" style="background:var(--bg);border-bottom:1px solid var(--bd);padding:7rem 2.5rem">
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;gap:2rem;flex-wrap:wrap">
+    <div>
+      <div class="tag"><span class="tag-dot"></span>About us</div>
+      <h2 style="font-family:var(--fh);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:800;letter-spacing:-.04em;line-height:1.05">We make brands buyers notice.</h2>
+    </div>
+    <p style="font-size:.9rem;color:var(--g5);max-width:36ch;line-height:1.75">From Figma to fully deployed — one team, zero handoff chaos.</p>
+  </div>
+
+  <div class="about-bento">
+
+    <!-- Left: dark philosophy -->
+    <div class="ab ab-statement">
+      <div class="ab-statement-top">
+        <div class="ab-statement-label">Our philosophy</div>
+        <div class="ab-statement-text">"Design is only powerful when it moves numbers. Every pixel we create is meant to lift conversion, credibility, and confidence. Otherwise, it doesn't leave our studio."</div>
+      </div>
+      <div class="ab-statement-bottom">
+        <div class="ab-statement-founder">
+          <div class="ab-founder-av">RF</div>
+          <div>
+            <div class="ab-founder-name">Rajan Fernandes</div>
+            <div class="ab-founder-role">Founder &amp; Creative Director</div>
+          </div>
+        </div>
+        <div class="ab-statement-since">Est. 2020</div>
+      </div>
+    </div>
+
+    <!-- Right: dot-grid text -->
+    <div class="ab ab-text">
+      <p>We transform startups, SaaS, and D2C companies into investor-ready brands — and build websites that convert. From the first wireframe to a live deployed product, one team, end to end.</p>
+    </div>
+
+  </div>
+
+  <!-- Stats -->
+  <div class="ab-stats">
+    <div class="ab-stat">
+      <div class="ab-stat-bar"></div>
+      <div class="ab-stat-n">3<sup>yr</sup></div>
+      <div class="ab-stat-l">In the game</div>
+    </div>
+    <div class="ab-stat">
+      <div class="ab-stat-bar"></div>
+      <div class="ab-stat-n">50<sup>+</sup></div>
+      <div class="ab-stat-l">Brands launched</div>
+    </div>
+    <div class="ab-stat">
+      <div class="ab-stat-bar"></div>
+      <div class="ab-stat-n">14<sup>d</sup></div>
+      <div class="ab-stat-l">Avg. delivery</div>
+    </div>
+    <div class="ab-stat">
+      <div class="ab-stat-bar"></div>
+      <div class="ab-stat-n">0</div>
+      <div class="ab-stat-l">Missed deadlines</div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════
+  TEAM
+═══════════════════ -->
+<section id="team" style="background:var(--bg2);border-bottom:1px solid var(--bd);padding:7rem 2.5rem">
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;gap:2rem;flex-wrap:wrap">
+    <div>
+      <div class="tag"><span class="tag-dot"></span>The team</div>
+      <h2 style="font-family:var(--fh);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:800;letter-spacing:-.04em;line-height:1.05">Small team. Massive impact.</h2>
+    </div>
+    <p style="font-size:.9rem;color:var(--g5);max-width:36ch;line-height:1.75">Four people, one shared obsession — beautiful work that actually performs.</p>
+  </div>
+
+  <div class="tm-head">
+    <div class="tm-th">#</div>
+    <div class="tm-th">Photo</div>
+    <div class="tm-th">Name</div>
+    <div class="tm-th">Role</div>
+    <div class="tm-th">About</div>
+    <div class="tm-th" style="text-align:right">Links</div>
+  </div>
+
+  <div class="team-list">
+
+    <div class="tm-row">
+      <div class="tm-row-num">01</div>
+      <div class="tm-row-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&q=80" alt="Rajan"/></div>
+      <div class="tm-row-name">Rajan Fernandes</div>
+      <div class="tm-row-role">Founder · Creative Dir.</div>
+      <div class="tm-row-bio">Leads brand strategy and visual direction. 8+ years shaping digital identities for startups.</div>
+      <div class="tm-row-socials">
+        <a href="#" class="tm-soc">in</a>
+        <a href="#" class="tm-soc">𝕏</a>
+      </div>
+    </div>
+
+    <div class="tm-row">
+      <div class="tm-row-num">02</div>
+      <div class="tm-row-avatar"><img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face&q=80" alt="Priya"/></div>
+      <div class="tm-row-name">Priya Mehta</div>
+      <div class="tm-row-role">Design Lead · UI/UX</div>
+      <div class="tm-row-bio">Crafts pixel-perfect interfaces and design systems that scale across every product touchpoint.</div>
+      <div class="tm-row-socials">
+        <a href="#" class="tm-soc">in</a>
+        <a href="#" class="tm-soc">◎</a>
+      </div>
+    </div>
+
+    <div class="tm-row">
+      <div class="tm-row-num">03</div>
+      <div class="tm-row-avatar"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face&q=80" alt="Arjun"/></div>
+      <div class="tm-row-name">Arjun Nair</div>
+      <div class="tm-row-role">Dev Lead · Frontend</div>
+      <div class="tm-row-bio">Turns Figma files into blazing-fast, accessible, production-grade code. React &amp; Next.js specialist.</div>
+      <div class="tm-row-socials">
+        <a href="#" class="tm-soc">in</a>
+        <a href="#" class="tm-soc">gh</a>
+      </div>
+    </div>
+
+    <div class="tm-row">
+      <div class="tm-row-num">04</div>
+      <div class="tm-row-avatar"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop&crop=face&q=80" alt="Sneha"/></div>
+      <div class="tm-row-name">Sneha Pillai</div>
+      <div class="tm-row-role">Strategy · PM</div>
+      <div class="tm-row-bio">Keeps projects on time, on budget, and clients smiling. The reason things never go sideways.</div>
+      <div class="tm-row-socials">
+        <a href="#" class="tm-soc">in</a>
+        <a href="#" class="tm-soc">𝕏</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- WORK — table rows with hover photo -->
+<section id="work">
+  <div class="work-head">
+    <div>
+      <div class="tag"><span class="tag-dot"></span>Selected work</div>
+      <h2 style="font-family:var(--fh);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:800;letter-spacing:-.04em;line-height:1.05">Projects that speak louder.</h2>
+    </div>
+    <a href="#" class="btn btn-ghost">View all work<i data-lucide="arrow-up-right" style="width:15px;height:15px"></i></a>
+  </div>
+
+  <!-- table header -->
+  <div class="work-table-head">
+    <div class="work-th">#</div>
+    <div class="work-th">Category</div>
+    <div class="work-th">Project name</div>
+    <div class="work-th">Stack</div>
+    <div class="work-th">Year</div>
+    <div class="work-th"></div>
+  </div>
+
+  <div class="work-list">
+    <div class="work-row">
+      <div class="work-row-num">01</div>
+      <div class="work-row-cat-col">SaaS / Redesign</div>
+      <div class="work-row-title-col"><div class="work-row-title">Nexus — SaaS Platform Redesign</div></div>
+      <div class="work-row-tags-col"><span class="work-row-tag">UI/UX</span><span class="work-row-tag">Figma</span><span class="work-row-tag">Next.js</span></div>
+      <div class="work-row-year">2024</div>
+      <div class="work-row-arrow"><i data-lucide="arrow-up-right" style="width:17px;height:17px"></i></div>
+    </div>
+    <div class="work-row">
+      <div class="work-row-num">02</div>
+      <div class="work-row-cat-col">Startup / Landing</div>
+      <div class="work-row-title-col"><div class="work-row-title">Orbit — Startup Landing Page</div></div>
+      <div class="work-row-tags-col"><span class="work-row-tag">Design</span><span class="work-row-tag">Framer</span><span class="work-row-tag">Deploy</span></div>
+      <div class="work-row-year">2024</div>
+      <div class="work-row-arrow"><i data-lucide="arrow-up-right" style="width:17px;height:17px"></i></div>
+    </div>
+    <div class="work-row">
+      <div class="work-row-num">03</div>
+      <div class="work-row-cat-col">eCommerce / Brand</div>
+      <div class="work-row-title-col"><div class="work-row-title">Floe — eCommerce Brand</div></div>
+      <div class="work-row-tags-col"><span class="work-row-tag">Branding</span><span class="work-row-tag">UI/UX</span><span class="work-row-tag">Dev</span></div>
+      <div class="work-row-year">2023</div>
+      <div class="work-row-arrow"><i data-lucide="arrow-up-right" style="width:17px;height:17px"></i></div>
+    </div>
+    <div class="work-row">
+      <div class="work-row-num">04</div>
+      <div class="work-row-cat-col">Product / Website</div>
+      <div class="work-row-title-col"><div class="work-row-title">Velo — Product Website</div></div>
+      <div class="work-row-tags-col"><span class="work-row-tag">Design</span><span class="work-row-tag">Next.js</span><span class="work-row-tag">CMS</span></div>
+      <div class="work-row-year">2023</div>
+      <div class="work-row-arrow"><i data-lucide="arrow-up-right" style="width:17px;height:17px"></i></div>
+    </div>
+    <div class="work-row">
+      <div class="work-row-num">05</div>
+      <div class="work-row-cat-col">SaaS / Dashboard</div>
+      <div class="work-row-title-col"><div class="work-row-title">Spark — Analytics Dashboard</div></div>
+      <div class="work-row-tags-col"><span class="work-row-tag">UI/UX</span><span class="work-row-tag">React</span><span class="work-row-tag">Figma</span></div>
+      <div class="work-row-year">2023</div>
+      <div class="work-row-arrow"><i data-lucide="arrow-up-right" style="width:17px;height:17px"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="proc-header">
+    <div class="tag"><span class="tag-dot"></span>How we work</div>
+    <h2>A process built for clarity.</h2>
+    <p class="proc-sub">No surprises. No scope creep. A clear path from idea to live product — with you at every step.</p>
+  </div>
+  <div class="proc-grid">
+    <div class="proc-card">
+      <div class="proc-big-num">01</div>
+      <div class="proc-icon"><i data-lucide="search" style="width:22px;height:22px"></i></div>
+      <div class="proc-title">Discovery</div>
+      <div class="proc-desc">We dig into your goals, audience, and competitors. No guesswork — just direction and a shared plan.</div>
+    </div>
+    <div class="proc-card">
+      <div class="proc-big-num">02</div>
+      <div class="proc-icon"><i data-lucide="figma" style="width:22px;height:22px"></i></div>
+      <div class="proc-title">Design in Figma</div>
+      <div class="proc-desc">Wireframes first, high-fidelity next. You approve every screen before a single line of code is written.</div>
+    </div>
+    <div class="proc-card">
+      <div class="proc-big-num">03</div>
+      <div class="proc-icon"><i data-lucide="terminal" style="width:22px;height:22px"></i></div>
+      <div class="proc-title">Build</div>
+      <div class="proc-desc">Pixel-perfect code. Responsive, fast, accessible, and built to last across every device and browser.</div>
+    </div>
+    <div class="proc-card">
+      <div class="proc-big-num">04</div>
+      <div class="proc-icon"><i data-lucide="check-circle" style="width:22px;height:22px"></i></div>
+      <div class="proc-title">Launch</div>
+      <div class="proc-desc">We deploy, test, and hand over everything. Code, assets, CMS, docs. You own it all completely.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES STRIP -->
+<section id="services-strip">
+  <div class="svc-strip-head">
+    <div>
+      <div class="tag"><span class="tag-dot"></span>Our services</div>
+      <h2>Everything you need,<br>under one roof.</h2>
+    </div>
+    <p>From the first wireframe to a live deployed product — one team, zero handoff, zero outsourcing.</p>
+  </div>
+  <div class="svc-cards-grid">
+
+    <!-- Card 1: UI/UX -->
+    <div class="svc-card">
+      <div class="svc-card-icon"><i data-lucide="figma" style="width:22px;height:22px;color:var(--accent)"></i></div>
+      <div class="svc-card-num">01</div>
+      <div class="svc-card-body">
+        <div class="svc-card-name">UI/UX Design</div>
+        <div class="svc-card-desc">Research-driven interfaces that feel intuitive and convert.</div>
+        <div class="svc-card-tags"><span class="svc-card-tag">Wireframes</span><span class="svc-card-tag">Prototypes</span><span class="svc-card-tag">Design Systems</span></div>
+      </div>
+    </div>
+
+    <!-- Card 2: Website Design -->
+    <div class="svc-card">
+      <div class="svc-card-icon"><i data-lucide="monitor" style="width:22px;height:22px;color:var(--accent)"></i></div>
+      <div class="svc-card-num">02</div>
+      <div class="svc-card-body">
+        <div class="svc-card-name">Website Design</div>
+        <div class="svc-card-desc">Premium visual design for landing pages, SaaS, and marketing sites.</div>
+        <div class="svc-card-tags"><span class="svc-card-tag">Landing Pages</span><span class="svc-card-tag">Dashboards</span><span class="svc-card-tag">Brand Identity</span></div>
+      </div>
+    </div>
+
+    <!-- Card 3: Development -->
+    <div class="svc-card">
+      <div class="svc-card-icon"><i data-lucide="code-2" style="width:22px;height:22px;color:var(--accent)"></i></div>
+      <div class="svc-card-num">03</div>
+      <div class="svc-card-body">
+        <div class="svc-card-name">Development</div>
+        <div class="svc-card-desc">Pixel-perfect Figma to production code. React, Next.js, fast and scalable.</div>
+        <div class="svc-card-tags"><span class="svc-card-tag">React</span><span class="svc-card-tag">Next.js</span><span class="svc-card-tag">CMS</span></div>
+      </div>
+    </div>
+
+    <!-- Card 4: Deployment -->
+    <div class="svc-card">
+      <div class="svc-card-icon"><i data-lucide="rocket" style="width:22px;height:22px;color:var(--accent)"></i></div>
+      <div class="svc-card-num">04</div>
+      <div class="svc-card-body">
+        <div class="svc-card-name">Deployment</div>
+        <div class="svc-card-desc">Live on your domain — full handoff with code, docs, and credentials.</div>
+        <div class="svc-card-tags"><span class="svc-card-tag">Live Launch</span><span class="svc-card-tag">Handoff</span><span class="svc-card-tag">Support</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testi-head">
+    <div>
+      <div class="tag"><span class="tag-dot"></span>Client love</div>
+      <h2 style="font-family:var(--fh);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:800;letter-spacing:-.04em;line-height:1.05">What our clients actually say.</h2>
+    </div>
+    <div class="swiper-btns">
+      <button class="swiper-btn" id="tprev"><i data-lucide="arrow-left" style="width:18px;height:18px"></i></button>
+      <button class="swiper-btn" id="tnext"><i data-lucide="arrow-right" style="width:18px;height:18px"></i></button>
+    </div>
+  </div>
+  <div class="swiper tSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-card-text">"They took our rough idea and turned it into a site that stopped people in their tracks. The design-to-deploy flow was seamless — zero stress on our end. Delivered ahead of schedule."</p><div class="testi-divider"></div><div class="testi-author"><div class="testi-av">AR</div><div><div class="testi-name">Alex Rivera</div><div class="testi-role">CEO, Nexus SaaS</div></div></div></div></div>
+      <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-card-text">"Our conversion rate jumped 40% after the new landing page went live. Fast, professional, and they actually get startups. Genuinely the best design investment we've made."</p><div class="testi-divider"></div><div class="testi-author"><div class="testi-av">MK</div><div><div class="testi-name">Meera Kapoor</div><div class="testi-role">Founder, Orbit App</div></div></div></div></div>
+      <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-card-text">"We'd tried two other agencies before. This team was different — sharp design instincts, clear communication, and they shipped exactly what was promised, on time."</p><div class="testi-divider"></div><div class="testi-author"><div class="testi-av">JT</div><div><div class="testi-name">James Thornton</div><div class="testi-role">Head of Brand, Floe</div></div></div></div></div>
+      <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-card-text">"From first call to final handoff — every step was professional. The Figma files were so clean our in-house dev team was impressed. We'll use them again without question."</p><div class="testi-divider"></div><div class="testi-author"><div class="testi-av">SL</div><div><div class="testi-name">Sara Lim</div><div class="testi-role">Product Lead, Velo</div></div></div></div></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-head">
+    <div>
+      <div class="tag"><span class="tag-dot"></span>Investment</div>
+      <h2>Transparent pricing. No surprises.</h2>
+    </div>
+    <p>Every package includes design, development, and deployment. Choose the scope that fits.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pc">
+      <div class="pc-tier">Starter</div><div class="pc-price"><sup>$</sup>1,499</div><div class="pc-period">one-time project</div>
+      <div class="pc-div"></div>
+      <ul class="pc-features">
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Landing page design (Figma)</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Up to 5 sections</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Mobile responsive</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Basic development</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Deployment included</li>
+        <li class="no"><i data-lucide="x" class="fno" style="width:14px;height:14px"></i>Design system</li>
+        <li class="no"><i data-lucide="x" class="fno" style="width:14px;height:14px"></i>CMS integration</li>
+      </ul>
+      <a href="#cta" class="btn-pc btn-po">Get started</a>
+    </div>
+    <div class="pc feat">
+      <div class="pc-badge-wrap"><div class="pc-badge">Most popular</div></div>
+      <div class="pc-tier">Growth</div><div class="pc-price"><sup>$</sup>3,499</div><div class="pc-period">one-time project</div>
+      <div class="pc-div"></div>
+      <ul class="pc-features">
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Full website design (Figma)</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Up to 12 sections</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Design system included</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>React / Next.js build</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>CMS integration</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>1 month post-launch support</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>2 revision rounds</li>
+      </ul>
+      <a href="#cta" class="btn-pc btn-pf"><i data-lucide="arrow-right" style="width:15px;height:15px"></i>Start a project</a>
+    </div>
+    <div class="pc">
+      <div class="pc-tier">Premium</div><div class="pc-price"><sup>$</sup>7,999</div><div class="pc-period">one-time project</div>
+      <div class="pc-div"></div>
+      <ul class="pc-features">
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Full brand + UI/UX design</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Unlimited pages</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Full design system</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Custom animations</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Advanced development</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>3 months support</li>
+        <li><i data-lucide="check" class="fck" style="width:14px;height:14px"></i>Priority turnaround</li>
+      </ul>
+      <a href="#cta" class="btn-pc btn-po">Let's talk</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-wrap">
+    <div class="faq-left">
+      <div class="tag"><span class="tag-dot"></span>FAQ</div>
+      <h2>Questions answered.</h2>
+      <p>Everything you need to know before starting. Still unsure? Book a free call — no pitch, just answers.</p>
+      <a href="#cta" class="btn btn-red">Book a free call<i data-lucide="arrow-right" style="width:15px;height:15px"></i></a>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">What does "Figma to code" actually mean?<span class="faq-ico"><i data-lucide="plus" style="width:14px;height:14px"></i></span></div><div class="faq-a">We design your entire site in Figma first — you see and approve every screen before a single line of code is written. Then we hand-code it into a production-ready website.</div></div>
+      <div class="faq-item"><div class="faq-q">How long does a project take?<span class="faq-ico"><i data-lucide="plus" style="width:14px;height:14px"></i></span></div><div class="faq-a">Starter projects take 1–2 weeks. Growth projects run 3–5 weeks. Premium is 6–10 weeks. We give you a clear timeline before we start.</div></div>
+      <div class="faq-item"><div class="faq-q">Do I own the design files?<span class="faq-ico"><i data-lucide="plus" style="width:14px;height:14px"></i></span></div><div class="faq-a">Yes — 100%. After completion you receive all Figma source files, code repository access, and full deployment credentials. Everything is yours.</div></div>
+      <div class="faq-item"><div class="faq-q">What if I need changes after launch?<span class="faq-ico"><i data-lucide="plus" style="width:14px;height:14px"></i></span></div><div class="faq-a">Growth and Premium packages include post-launch support. Starter clients can purchase a support retainer. We also offer ongoing monthly maintenance plans.</div></div>
+      <div class="faq-item"><div class="faq-q">Which tech stack do you use?<span class="faq-ico"><i data-lucide="plus" style="width:14px;height:14px"></i></span></div><div class="faq-a">Primarily React and Next.js. We also build in HTML/CSS/JS and can integrate with Webflow, Framer, or your preferred CMS.</div></div>
+      <div class="faq-item"><div class="faq-q">How do we get started?<span class="faq-ico"><i data-lucide="plus" style="width:14px;height:14px"></i></span></div><div class="faq-a">Book a free 30-minute discovery call. We'll understand your goals, scope the project, and send a proposal within 48 hours.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-box">
+    <div class="cta-box-inner">
+      <div class="cta-center">
+        <div class="cta-tag"><span class="cta-tag-dot"></span>Ready when you are</div>
+        <h2 class="cta-title">Let's build something<br><span class="red">remarkable</span> together.</h2>
+        <p class="cta-sub">From first pixel to live deployment we're the team that  makes it happen.  <br>Book a free 30-min call, no strings attached.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn-cp">Book a free call<span class="btn-cp-dot"></span></a>
+          <a href="mailto:hello@designstudio.com" class="btn-cg">hello@designstudio.com</a>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<!-- FIXED FLOATING BUTTON -->
+<a href="#cta" class="fixed-btn">
+  Start a project
+  <span class="fixed-btn-dot"></span>
+</a>
+
+<!-- FOOTER -->
+<footer>
+
+  <!-- mid: brand + nav cols -->
+  <div class="footer-mid">
+    <div class="footer-brand">
+      <div class="footer-logo">Studio<span class="fdot"></span></div>
+      <p>Premium design and development studio. From Figma to fully deployed.</p>
+      <div style="display:flex;flex-direction:column;gap:.35rem;margin-top:.75rem">
+        <a href="mailto:hello@designstudio.com" style="font-size:.85rem;font-weight:600;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.55)'">hello@designstudio.com</a>
+        <a href="tel:+918928862682" style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.35)'">+91 89288 62682</a>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services-strip">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Website Design</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">Deployment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom bar -->
+  <div class="footer-bottom">
+    <span>© 2026 Studio. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <span style="color:rgba(255,255,255,.15)">·</span>
+      <span>Mumbai, India</span>
+    </div>
+  </div>
+
+  <!-- big wordmark -->
+  <div class="footer-wm">STUDIO<span>.</span></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+// Icons — lucide loaded just above, DOM is fully parsed here
+lucide.createIcons();
+
+// Re-run after full load to catch any missed icons
+window.addEventListener('load', function(){ lucide.createIcons(); });
+
+// Swiper
+new Swiper('.tSwiper',{
+  slidesPerView:1,spaceBetween:20,
+  pagination:{el:'.swiper-pagination',clickable:true},
+  navigation:{prevEl:'#tprev',nextEl:'#tnext'},
+  breakpoints:{640:{slidesPerView:2,spaceBetween:20},1024:{slidesPerView:3,spaceBetween:24}}
+});
+
+// FAQ
+document.querySelectorAll('.faq-item').forEach(function(item){
+  item.querySelector('.faq-q').addEventListener('click',function(){
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+    if(!open) item.classList.add('open');
+    lucide.createIcons();
+  });
+});
+
+// Scroll reveal — only on cards, not on icon-containing elements
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+    }
+  });
+},{threshold:0.07});
+
+document.querySelectorAll('.work-row,.svc-strip-card,.testi-card,.pc,.proc-card,.about-card,.about-text-col').forEach(function(el){
+  el.style.opacity='0';
+  el.style.transform='translateY(18px)';
+  el.style.transition='opacity .55s ease,transform .55s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

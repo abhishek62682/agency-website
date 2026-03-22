@@ -99,31 +99,6 @@
 
 
 
-<script>
-  (function () {
-    var hamburger = document.getElementById("hamburgerBtn");
-    var drawer    = document.getElementById("mobileDrawer");
-    var closeBtn  = document.getElementById("drawerClose");
-
-    function openDrawer() {
-      drawer.classList.add("open");
-    
-      document.body.style.overflow = "hidden";
-      lucide.createIcons();
-    }
-    function closeDrawer() {
-      drawer.classList.remove("open");
-      hamburger.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    hamburger.addEventListener("click", openDrawer);
-    closeBtn.addEventListener("click", closeDrawer);
-    drawer.querySelectorAll("nav a").forEach(function (link) {
-      link.addEventListener("click", closeDrawer);
-    });
-  })();
-</script>
 
     <!-- HERO -->
    <section id="hero" style="padding: 0">
@@ -298,7 +273,7 @@
           <div class="proj-img">
             <img
               class="img-base"
-              src="./Firefly_Gemini Flash_i like the first image background image frame color so i wanted from to make second b 372334 (1).png"
+              src="./assest/project/udaya-brush.png"
               alt="Udaya Brush"
             />
 
@@ -333,7 +308,7 @@
           class="proj-card"
         >
           <div class="proj-img">
-            <img class="img-base" src="./Firefly.png" alt="Print Printers" />
+            <img class="img-base" src="./assest/project/print-printers.png" alt="Print Printers" />
             <div class="proj-hover-btn">
               <span
                 >View Site
@@ -368,7 +343,7 @@
           <div class="proj-img">
             <img
               class="img-base"
-              src="./Firefly_GeminiFlash_listen the first image is totally fine and good i needed first image background frame 688105.png"
+              src="./assest/project/digital-satna.png"
               alt="Digital Satna"
             />
 
@@ -590,7 +565,7 @@
               <div class="testi-author">
                 <div class="testi-av">S</div>
                 <div>
-                  <div class="testi-name">Suman</div>
+                  <div class="testi-name">Sayam</div>
                   <div class="testi-role">Broker Project, Udaya Brush</div>
                 </div>
               </div>
@@ -986,6 +961,32 @@
           obs.observe(el);
         });
     </script>
+
+    <script>
+  (function () {
+    var hamburger = document.getElementById("hamburgerBtn");
+    var drawer    = document.getElementById("mobileDrawer");
+    var closeBtn  = document.getElementById("drawerClose");
+
+    function openDrawer() {
+      drawer.classList.add("open");
+      
+      document.body.style.overflow = "hidden";
+      lucide.createIcons();
+    }
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      hamburger.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    hamburger.addEventListener("click", openDrawer);
+    closeBtn.addEventListener("click", closeDrawer);
+    drawer.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeDrawer);
+    });
+  })();
+</script>
 
 
   </body>

@@ -1653,6 +1653,12 @@
         .ab-st-bottom{
           gap:20px;
         }
+        .btn{
+          width:100%;
+          justify-content: center;
+
+        }
+       
       }
   
 
@@ -1705,7 +1711,7 @@
   border-radius: 20px;
   z-index:9999;
   transform: translateX(calc(-100% - 24px));
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.8s ease-in-out;
   overflow: hidden;
   box-shadow: 0 32px 80px rgba(0,0,0,0.18);
 }

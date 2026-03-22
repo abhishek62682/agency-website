@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- Calendly badge widget begin -->
+   
     <link
       href="https://assets.calendly.com/assets/external/widget.css"
       rel="stylesheet"
@@ -26,17 +26,104 @@
    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- NAV -->
-    <nav>
-      <a href="#" class="logo">RainoStudios</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services-strip">Services</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-      </ul>
-    </nav>
+<!-- ═══════════════════════════════════════════════════════════
+     STEP 1: Replace your <nav> with this
+     ═══════════════════════════════════════════════════════════ -->
+<nav>
+  <a href="#" class="logo">RainoStudios</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services-strip">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+
+<div class="mobile-drawer " id="mobileDrawer">
+
+  <!-- Lucide X close — top right -->
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+    <i data-lucide="x" style="width:16px;height:16px;"></i>
+  </button>
+
+  <!-- Big nav links -->
+  <div class="drawer-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#services-strip">Services</a>
+    <a href="#process">Process</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </div>
+
+  <!-- Bottom section -->
+  <div class="drawer-bottom">
+
+    <!-- Social icons -->
+    <div class="drawer-socials">
+      <a href="#" class="drawer-social-btn" aria-label="Instagram">
+        <i data-lucide="instagram" style="width:17px;height:17px;"></i>
+      </a>
+      <a href="#" class="drawer-social-btn" aria-label="Twitter / X">
+        <i data-lucide="twitter" style="width:17px;height:17px;"></i>
+      </a>
+        <a href="#" class="drawer-social-btn" aria-label="LinkedIn">
+        <i data-lucide="linkedin" style="width:17px;height:17px;"></i>
+      </a>
+     
+    </div>
+
+    <!-- Dark CTA card -->
+    <a target="_blank" href="https://calendly.com/abhishekreact-dev/new-meeting" class="drawer-cta-card calendlyBtn">
+      <span class="drawer-cta-label">Book a free call ↗</span>
+      <span class="drawer-cta-arrow">
+        <i data-lucide="arrow-up-right" style="width:14px;height:14px;"></i>
+      </span>
+    </a>
+
+    <!-- Footer links -->
+    <div class="drawer-footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script>
+  (function () {
+    var hamburger = document.getElementById("hamburgerBtn");
+    var drawer    = document.getElementById("mobileDrawer");
+    var closeBtn  = document.getElementById("drawerClose");
+
+    function openDrawer() {
+      drawer.classList.add("open");
+    
+      document.body.style.overflow = "hidden";
+      lucide.createIcons();
+    }
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      hamburger.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    hamburger.addEventListener("click", openDrawer);
+    closeBtn.addEventListener("click", closeDrawer);
+    drawer.querySelectorAll("nav a").forEach(function (link) {
+      link.addEventListener("click", closeDrawer);
+    });
+  })();
+</script>
 
     <!-- HERO -->
    <section id="hero" style="padding: 0">

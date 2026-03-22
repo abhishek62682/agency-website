@@ -1665,6 +1665,10 @@
         .fixed-btn{
           display:none;
         }
+        #hero{
+          min-height: 90vh;
+          margin-top: 73px;
+        }
        
       }
   

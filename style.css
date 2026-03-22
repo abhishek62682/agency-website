@@ -1,6 +1,6 @@
 
       :root {
-        --bg: #f8f7f3;
+        /* --bg: #f8f7f3; */
         --bg2: #f0ede6;
         --white: #ffffff;
         --black: #0e0e0e;
@@ -35,7 +35,7 @@
         scroll-behavior: smooth;
       }
       body {
-        background: var(--bg);
+        background: white;
         color: var(--black);
         font-family: var(--fb);
         font-size: 16px;

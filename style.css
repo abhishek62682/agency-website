@@ -1658,6 +1658,13 @@
           justify-content: center;
 
         }
+        .footer-bot{
+          flex-wrap: wrap;
+          gap:20px;
+        }
+        .fixed-btn{
+          display:none;
+        }
        
       }
   
